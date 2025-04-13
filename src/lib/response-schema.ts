@@ -1,4 +1,4 @@
-export type ResponseSchema<TData, TError> = {
+export type ActionResponse<TData, TError> = {
   status: "success",
   code: number,
   data: TData
