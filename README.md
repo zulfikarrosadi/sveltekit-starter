@@ -1,38 +1,17 @@
-# sv
+# Sveltekit Starter
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+Already setup with
+- Better Auth (Email and Google)
+- ShadCn that compatible with Tailwindcss v4
+- Drizzle ORM with Postgres
 
-## Creating a project
+## How to use
+1. Clone / download / use template this repo
+1. run `pnpm install`
+1. copy `.env.example` to `.env`
+1. Create postgres database and update the url at `.env`
+1. run `pnpm run db:push`
+1. and run `pnpm run dev` to start vite local development server
 
-If you're seeing this, you've probably already done this step. Congrats!
-
-```bash
-# create a new project in the current directory
-npx sv create
-
-# create a new project in my-app
-npx sv create my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+> Better auth tend to use port 3000, because of that, I change vite default port `5173` to `3000`
+> You can change this in `vite.config.ts` and change `BETTER_AUTH_URL` in `.env` file
